@@ -24,7 +24,10 @@
 
 	//feed ve sitemaplar
 	//fark ettiyseniz birden çok url patterni tanımlayabiliyoruz
-	Route::add('feed', array('/feed.xml$/', '/feed.php$/', '/rss.xm$/', '/feed$/', '/atom$/', '/rss$/'));
+	Route::add('feed', array(
+		'/feed.xml$/', '/feed.php$/', '/feed$/', 
+		'/rss.xm$/', '/rss$/, 
+		'/atom$/'));
 
 	//Router çalıştırıyoruz
 	$result = Route::run();
