@@ -4,6 +4,8 @@
 
 ## Nasıl kullanılır:
 ```php
+<?php
+
 	// Sınıfı nereye koyduysak oradan çağırıyoruz
 	include 'Route.php';
 
