@@ -50,6 +50,8 @@
 	}
 	
 	//en son dosyamızı include ediyoruz
+	//burada elbette bir dosya varlığı kontrolü yapılabilir
+	//lakin adı üstünde tembel router!
 	include $_sayfaadi.'.php';
 
 ```
