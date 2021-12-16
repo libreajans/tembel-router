@@ -1,0 +1,14 @@
+DirectoryIndex index.php
+
+# Apache modrewrite özelliğini etkinleştirelim
+RewriteEngine on
+
+# Yeniden yazma işleminin yapılacağı ana dizini belirtelim
+RewriteBase /
+
+# Varolan dosyaları gözardı edelim
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+# Geri kalan tüm istekleri ana sayfaya yönlendirelim
+RewriteRule ^(.*)$ index.php [QSA]
