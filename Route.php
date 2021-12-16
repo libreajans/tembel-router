@@ -1,20 +1,20 @@
 <?php
 
-/**
-* Berbat belgelendirme için beni bağışlayın lütfen.
-* 
-* @page 	: İşlem sonunda hangi sayfanın include edilmesi gerektiğini depolamakta kullanıyoruz
-* @pattern	: Kullanacağımız eşleştirme regex patternlerini burada tanımlıyoruz
-* 			 Aynı sayfayı birden fazla dış url'den çözümleyebilmek için burada 
-*			 dizi kullanıyoruz. Her pattern anahtarsız bir dizi olarak tanımlanmalı
-* @param	: Yeni sayfaya aktarılmasını istediğimiz parametreleri burada dizi olarak 
-* 			 oluşrup gönderiyoruz. daha sonra extract komutu ile değişkene dönüştürebiliyoruz
-*
-* Sonuç kısmında sonucu bir dizi olarak dönüyouz, dizi içinde iki eşleşmiş sonuç olabiliyor
-* İşimize yarayan sonucu duruma göre kullanıyoruz.			 
-*/
+	/***
+	* Berbat belgelendirme için beni bağışlayın lütfen.
+	* 
+	* @page 	: İşlem sonunda hangi sayfanın include edilmesi gerektiğini depolamakta kullanıyoruz
+	* @pattern	: Kullanacağımız eşleştirme regex patternlerini burada tanımlıyoruz
+	* 			 Aynı sayfayı birden fazla dış url'den çözümleyebilmek için burada 
+	*			 dizi kullanıyoruz. Her pattern anahtarsız bir dizi olarak tanımlanmalı
+	* @param	: Yeni sayfaya aktarılmasını istediğimiz parametreleri burada dizi olarak 
+	* 			 oluşrup gönderiyoruz. daha sonra extract komutu ile değişkene dönüştürebiliyoruz
+	*
+	* Sonuç kısmında sonucu bir dizi olarak dönüyouz, dizi içinde iki eşleşmiş sonuç olabiliyor
+	* İşimize yarayan sonucu duruma göre kullanıyoruz.			 
+	*/
 
-namespace Yakusha;
+	namespace Yakusha;
 
 	class Route
 	{
@@ -60,4 +60,4 @@ namespace Yakusha;
 				}
 			}
 		}
-}
+	}
