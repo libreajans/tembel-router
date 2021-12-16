@@ -51,4 +51,4 @@
 
 ```
 
-Büyük oranda şu projeden ilham alınmıştır: https://github.com/libreajans/simplePHPRouter
+Büyük oranda şu projeden ilham alınmıştır: https://github.com/steampixel/simplePHPRouter
