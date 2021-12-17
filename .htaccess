@@ -1,10 +1,13 @@
-DirectoryIndex index.php
+Options +FollowSymLinks
 
 # Apache modrewrite özelliğini etkinleştirelim
-RewriteEngine on
+RewriteEngine On
 
 # Yeniden yazma işleminin yapılacağı ana dizini belirtelim
 RewriteBase /
+
+# Ana sayfayı tekrar tekrar yönlendirmemek için bypass ediyoruz
+DirectoryIndex 		index.php?page=index
 
 # Varolan dosyaları gözardı edelim
 RewriteCond %{REQUEST_FILENAME} !-f
