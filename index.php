@@ -1,10 +1,8 @@
 <?php
-
+	// Her neredeyse oradan Sınıfımızı çağıralım
 	require_once 'Route.php';
 
-	// Use this namespace
-	use Yakusha\Route;
-
+	// Bu isim uzayını kullanalım
 	use \Yakusha\Route;
 	
 	if(isset($_GET['page']) && $_GET['page'] == 'index')
