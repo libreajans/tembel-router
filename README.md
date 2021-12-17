@@ -10,7 +10,7 @@
 	include 'Route.php';
 
 	// İsim uzayını belirdiyoruz
-	use Yakusha\Route;
+	use \Yakusha\Route;
 
 	// Yollarımızı ekliyoruz
 	//sabit sayfa tanımlarımız
