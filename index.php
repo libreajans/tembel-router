@@ -5,7 +5,8 @@
 	// Bu isim uzayını kullanalım
 	use \Yakusha\Route;
 	
-	if(isset($_GET['page']) && $_GET['page'] == 'index')
+	//ana sayfa için hiç döngüye girme zahmetine katlanmayalım
+	if($_SERVER['REQUEST_URI'] == null OR $_SERVER['REQUEST_URI'] == '/' OR $_SERVER['REQUEST_URI'] == 'index.php')
 	{
 		$_sayfaadi = 'index';
 	}
