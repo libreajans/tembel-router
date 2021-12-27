@@ -9,7 +9,7 @@
 	// Sınıfı nereye koyduysak oradan çağırıyoruz
 	include 'Route.php';
 
-	// İsim uzayını belirdiyoruz
+	// İsim uzayını belirliyoruz
 	use \Yakusha\Route;
 
 	// Yollarımızı ekliyoruz
