@@ -41,59 +41,59 @@ Sorunuz olursa sormaktan çekinmeyin.
 		Route::add('etiketler', array('/etiketler\/(.*)$/', '/etiketler$/'), 1, 'string');
 		Route::add('arsiv', array('/arsiv\/(.*)$/'), 1, 'string');
 		Route::add('arama', array('/arama\/(.*)$/'), 1, 'string');
+ 		Route::add('arama', array('/arama$/'), 0, 'null');
 		
 		//değer gönderilmemiş haliyle çıplak sayfalar
-		Route::add('etiketler', array('/etiketler$/'), 0, 'string');
-		Route::add('arsiv', array('/arsiv$/'), 0, 'string');
-		Route::add('arama', array('/arama$/'), 0, 'string'); //TODO template de kırılma var
+		Route::add('etiketler', array('/etiketler$/'), 0, 'null');
+		Route::add('arsiv', array('/arsiv$/'), 0, 'null');
 		
-		Route::add('yazarlar', array('/yazarlar$/'), 0, 'string');
-		Route::add('books', array('/books$/'), 0, 'string');
-		Route::add('mansetler', array('/mansetler$/'), 0, 'string');
-		Route::add('ajax', array('/ajax.php$/'), 0, 'string');
+		Route::add('yazarlar', array('/yazarlar$/'), 0, 'null');
+		Route::add('books', array('/books$/'), 0, 'null');
+		Route::add('mansetler', array('/mansetler$/'), 0, 'null');
+		Route::add('ajax', array('/ajax.php$/'), 0, 'null');
 		
 		//Bu sayfalar alışkanlık olarak var, kimi sayfalar değer de alıyor, oluşturuyoruz
 		//değer alsalar bile değerlerini parse etmiyoruz
-		Route::add('index', array('/index.php$/', '/index.php\?(.*)/'), 0, 'string');
-		Route::add('giris', array('/giris.php$/', '/giris.php\?(.*)/'), 0, 'string');
-		Route::add('crop', array('/crop.php$/', '/crop.php\?(.*)$/'), 0, 'string');
-		Route::add('404', array('/404.php$/', '/404.php\?(.*)/'), 0, 'string');
-		Route::add('acp', array('/acp.php$/', '/acp.php\?(.*)/'), 0, 'string');
+		Route::add('index', array('/index.php$/', '/index.php\?(.*)/'), 0, 'null');
+		Route::add('giris', array('/giris.php$/', '/giris.php\?(.*)/'), 0, 'null');
+		Route::add('crop', array('/crop.php$/', '/crop.php\?(.*)$/'), 0, 'null');
+		Route::add('404', array('/404.php$/', '/404.php\?(.*)/'), 0, 'null');
+		Route::add('acp', array('/acp.php$/', '/acp.php\?(.*)/'), 0, 'null');
 		
 		//feed için bir kaç default yol belirtiyoruz
 		//bu sayfa da hiçbir değer almıyor
 		Route::add('feed', array('/feed.xml$/', '/feed.php$/', '/rss.xml$/', 
-			'/feed$/', '/atom$/', '/rss$/'), 0, 'string');
+			'/feed$/', '/atom$/', '/rss$/'), 0, 'null');
 		
 		//id cast ettiklerimiz bir arada dursun
-		Route::add('sitemap', array('/sitemap.xml$/'), 0, 'string', 
+		Route::add('sitemap', array('/sitemap.xml$/'), 0, 'null', 
 			array('image' => 1, 'change' => 0));
-		Route::add('sitemap', array('/sitemap_change.xml$/'), 0, 'string', 
+		Route::add('sitemap', array('/sitemap_change.xml$/'), 0, 'null', 
 			array('image' => 1, 'change' => 1));
-		Route::add('sitemap', array('/sitemap_yandex.xml$/'), 0, 'string', 
+		Route::add('sitemap', array('/sitemap_yandex.xml$/'), 0, 'null', 
 			array('image' => 0, 'change' => 1));
-		Route::add('sitemap', array('/sitemap_yandex_change.xml$/'), 0, 'string', 
+		Route::add('sitemap', array('/sitemap_yandex_change.xml$/'), 0, 'null', 
 			array('image' => 0, 'change' => 1));
 		
 		//sabit sayfa tanımlarımız
-		Route::add('page', array('/hakkimizda$/'), 0, 'string', array('id_cast' => 151));
-		Route::add('page', array('/kunye$/'), 0, 'string', array('id_cast' => 152));
-		Route::add('page', array('/iletisim$/'), 0, 'string', array('id_cast' => 153));
-		Route::add('page', array('/yazi-gondermek-icin$/'), 0, 'string', array('id_cast' => 154));
+		Route::add('page', array('/hakkimizda$/'), 0, 'null', array('id_cast' => 151));
+		Route::add('page', array('/kunye$/'), 0, 'null', array('id_cast' => 152));
+		Route::add('page', array('/iletisim$/'), 0, 'null', array('id_cast' => 153));
+		Route::add('page', array('/yazi-gondermek-icin$/'), 0, 'null', array('id_cast' => 154));
 
 		//sabit kategori yollarını tanımlıyoruz
-		Route::add('kategori', array('/dusunce$/'), 0, 'string', array('id_cast' => 100));
-		Route::add('kategori', array('/edebiyat$/'), 0, 'string', array('id_cast' => 101));
-		Route::add('kategori', array('/bilim$/'), 0, 'string', array('id_cast' => 102));
-		Route::add('kategori', array('/ilahiyat$/'), 0, 'string', array('id_cast' => 103));
-		Route::add('kategori', array('/soylesi$/'), 0, 'string', array('id_cast' => 104));
-		Route::add('kategori', array('/yeni-cikanlar$/'), 0, 'string', array('id_cast' => 105));
-		Route::add('kategori', array('/dergi$/'), 0, 'string', array('id_cast' => 106));
-		Route::add('kategori', array('/sinema$/'), 0, 'string', array('id_cast' => 107));
-		Route::add('kategori', array('/kara-tahta$/'), 0, 'string', array('id_cast' => 108));
-		Route::add('kategori', array('/haber$/'), 0, 'string', array('id_cast' => 109));
-		Route::add('kategori', array('/tarih$/'), 0, 'string', array('id_cast' => 110));
-		Route::add('kategori', array('/cocuk-kitapligi$/'), 0, 'string', array('id_cast' => 111));
+		Route::add('kategori', array('/dusunce$/'), 0, 'null', array('id_cast' => 100));
+		Route::add('kategori', array('/edebiyat$/'), 0, 'null', array('id_cast' => 101));
+		Route::add('kategori', array('/bilim$/'), 0, 'null', array('id_cast' => 102));
+		Route::add('kategori', array('/ilahiyat$/'), 0, 'null', array('id_cast' => 103));
+		Route::add('kategori', array('/soylesi$/'), 0, 'null', array('id_cast' => 104));
+		Route::add('kategori', array('/yeni-cikanlar$/'), 0, 'null', array('id_cast' => 105));
+		Route::add('kategori', array('/dergi$/'), 0, 'null', array('id_cast' => 106));
+		Route::add('kategori', array('/sinema$/'), 0, 'null', array('id_cast' => 107));
+		Route::add('kategori', array('/kara-tahta$/'), 0, 'null', array('id_cast' => 108));
+		Route::add('kategori', array('/haber$/'), 0, 'null', array('id_cast' => 109));
+		Route::add('kategori', array('/tarih$/'), 0, 'null', array('id_cast' => 110));
+		Route::add('kategori', array('/cocuk-kitapligi$/'), 0, 'null', array('id_cast' => 111));
 		
 		$result = Route::run();
 		
