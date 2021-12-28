@@ -27,10 +27,14 @@ Sorunuz olursa sormaktan çekinmeyin.
 	{
 		//Önce en çok kullanılan sayfaları tanımlıyoruz
 		//Bizim sitemiz için bunlar içerik sayfaları oluyor
-		Route::add('content_detail', array('/(.*)-k([0-9]*).html$/', '/(.*)-k([0-9]*).htm(.*)/'), 2, 'numeric');
-		Route::add('book_detail', array('/(.*)-bd([0-9]*).html$/', '/(.*)-bd([0-9]*).htm(.*)/'), 2, 'numeric');
-		Route::add('book_list', array('/(.*)-bl([0-9]*)$/', '/(.*)-bl([0-9]*)(.*)/'), 2, 'numeric');
-		Route::add('yazar_detay', array('/(.*)-a([0-9]*)$/', '/(.*)-a([0-9]*)(.*)/'), 2, 'numeric');
+		Route::add('content_detail', array('/(.*)-k([0-9]*).html$/', 
+			'/(.*)-k([0-9]*).htm(.*)/'), 2, 'numeric');
+		Route::add('book_detail', array('/(.*)-bd([0-9]*).html$/', 
+			'/(.*)-bd([0-9]*).htm(.*)/'), 2, 'numeric');
+		Route::add('book_list', array('/(.*)-bl([0-9]*)$/', 
+			'/(.*)-bl([0-9]*)(.*)/'), 2, 'numeric');
+		Route::add('yazar_detay', array('/(.*)-a([0-9]*)$/', 
+			'/(.*)-a([0-9]*)(.*)/'), 2, 'numeric');
 
 		//değer gönderilmiş haliyle kimi sayfalar
 		Route::add('etiket_liste', array('/etiket\/(.*)$/'), 1, 'string');
@@ -58,13 +62,18 @@ Sorunuz olursa sormaktan çekinmeyin.
 		
 		//feed için bir kaç default yol belirtiyoruz
 		//bu sayfa da hiçbir değer almıyor
-		Route::add('feed', array('/feed.xml$/', '/feed.php$/', '/rss.xml$/', '/feed$/', '/atom$/', '/rss$/'), 0, 'string');
+		Route::add('feed', array('/feed.xml$/', '/feed.php$/', '/rss.xml$/', 
+			'/feed$/', '/atom$/', '/rss$/'), 0, 'string');
 		
 		//id cast ettiklerimiz bir arada dursun
-		Route::add('sitemap', array('/sitemap.xml$/'), 0, 'string', array('image' => 1, 'change' => 0));
-		Route::add('sitemap', array('/sitemap_change.xml$/'), 0, 'string', array('image' => 1, 'change' => 1));
-		Route::add('sitemap', array('/sitemap_yandex.xml$/'), 0, 'string', array('image' => 0, 'change' => 1));
-		Route::add('sitemap', array('/sitemap_yandex_change.xml$/'), 0, 'string', array('image' => 0, 'change' => 1));
+		Route::add('sitemap', array('/sitemap.xml$/'), 0, 'string', 
+			array('image' => 1, 'change' => 0));
+		Route::add('sitemap', array('/sitemap_change.xml$/'), 0, 'string', 
+			array('image' => 1, 'change' => 1));
+		Route::add('sitemap', array('/sitemap_yandex.xml$/'), 0, 'string', 
+			array('image' => 0, 'change' => 1));
+		Route::add('sitemap', array('/sitemap_yandex_change.xml$/'), 0, 'string', 
+			array('image' => 0, 'change' => 1));
 		
 		//sabit sayfa tanımlarımız
 		Route::add('page', array('/hakkimizda$/'), 0, 'string', array('id_cast' => 151));
