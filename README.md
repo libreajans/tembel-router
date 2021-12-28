@@ -1,5 +1,5 @@
 # tembel-router
-Bu benim ilk router denemem. Artık .htacess dosyasına değer girerek yönlendirme yapmaktan bıkmıştım.
+Bu benim ilk router denemem. Artık .htaccess dosyasına değer girerek yönlendirme yapmaktan bıkmıştım.
 
 Bir kaç araştırma yaptıktan sonra şu projeden (https://github.com/steampixel/simplePHPRouter) özelleştirerek kendime bir Router yazmayı başardım.
 
