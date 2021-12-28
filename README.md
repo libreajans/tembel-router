@@ -14,7 +14,7 @@ Sorunuz olursa sormaktan çekinmeyin.
 <?php
 
  	//vendorları ve kendi classlarımızı çağırıyoruz
-	require_once Route.php';
+	require_once 'Route.php';
 
 	use Yakusha\Kitaphaber\Route;
 	
