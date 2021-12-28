@@ -12,7 +12,8 @@
 	* @match	: Eşleyen kaçıncı değerin alınacağını gösterir, bunlar 0,1,2 şeklinde bir sıralamayla gider
 	* 			  
 	* @type		: Elde etmek istediğimiz sonucun tipini belirlemeye yarar, farklı bir değer gelmişse router yoluna devam eder
-	* 			  kabul ettiği değerler (numeric, string)
+	* 			  kabul ettiği değerler (numeric, string, null)
+	* 			  null geldiğinde bu iki denetimi de yapmadan eşleşmeyi null olarak döner
 	* 
 	* @param	: Yeni sayfaya aktarılmasını istediğimiz parametreleri burada dizi olarak 
 	* 			  oluşturup gönderiyoruz. daha sonra extract komutu ile değişkene dönüştürebiliyoruz
@@ -84,6 +85,14 @@
 								break 2;
 							}
 						}
+						
+						//saçma bir şekilde buraya null göndermek de gerekebiliyor
+						if($route['type'] == 'null')
+						{
+							$result['match'] = 'null';
+							break 2;
+						}
+						
 					}
 				}
 			}
