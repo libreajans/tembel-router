@@ -18,7 +18,7 @@ Sorunuz olursa sormaktan çekinmeyin.
 
 	use Yakusha\Kitaphaber\Route;
 	
-	//bu küçük denetim sayesinde direk ana sayfa talep edildiyse rooter içine hiç almıyoruz
+	//bu küçük denetim sayesinde direk ana sayfa talep edildiyse router içine hiç almıyoruz
 	if(!isset($_SERVER['REQUEST_URI']) OR $_SERVER['REQUEST_URI'] == '/')
 	{
 		$_sayfaadi = 'index';
